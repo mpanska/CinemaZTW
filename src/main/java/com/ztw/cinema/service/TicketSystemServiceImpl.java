@@ -39,7 +39,6 @@ public class TicketSystemServiceImpl implements TicketSystemService {
         for (TicketRequest ticketRequest : ticketRequests) {
             Ticket ticket = new Ticket();
             ticket.setId(ticketRequest.getId());
-            ticket.setPrice(ticketRequest.getPrice());
             ticket.setShow(showService.findById(ticketRequest.getShowId()));
             ticket.setSeat(seatService.findById(ticketRequest.getSeatId()));
             ticket.setUser(userService.findByUsername(getUsernameFromAuthHeader(authHeader)));

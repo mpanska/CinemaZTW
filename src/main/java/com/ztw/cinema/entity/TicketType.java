@@ -1,9 +1,6 @@
 package com.ztw.cinema.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class TicketType {
@@ -14,7 +11,8 @@ public class TicketType {
 
     private String name;
 
-    private Double discount;
+    @Column(scale=2)
+    private Double price;
 
     public TicketType() {
     }
@@ -35,11 +33,11 @@ public class TicketType {
         this.name = name;
     }
 
-    public Double getDiscount() {
-        return discount;
+    public Double getPrice() {
+        return price;
     }
 
-    public void setDiscount(Double discount) {
-        this.discount = discount;
+    public void setPrice(Double price) {
+        this.price = price;
     }
 }

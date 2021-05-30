@@ -9,9 +9,6 @@ public class Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    @Column(scale=2)
-    private Double price;
-
     @ManyToOne
     @JoinColumn(name="show_id")
     private Show show;
@@ -41,14 +38,6 @@ public class Ticket {
 
     public void setId(Long id) {
         this.id = id;
-    }
-
-    public Double getPrice() {
-        return price;
-    }
-
-    public void setPrice(Double price) {
-        this.price = price;
     }
 
     public Show getShow() {

@@ -4,8 +4,6 @@ public class TicketRequest {
 
     private Long id;
 
-    private Double price;
-
     private Long showId;
 
     private Long seatId;
@@ -14,10 +12,6 @@ public class TicketRequest {
 
     public Long getId() {
         return id;
-    }
-
-    public Double getPrice() {
-        return price;
     }
 
     public Long getShowId() {
