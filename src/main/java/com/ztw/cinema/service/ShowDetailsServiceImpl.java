@@ -43,7 +43,7 @@ public class ShowDetailsServiceImpl implements ShowDetailsService{
         showDetails.setMovie(new MovieDto(movie.getId(), movie.getName(), movie.getDirector(), movie.getDescription(), movie.getReleaseDate(), movie.getDuration()));
 
         for (Seat seat : seats) {
-            SeatDto seatDto = new SeatDto(seat.getId(), seat.getNumber(), seat.getRow(), true);
+            SeatDto seatDto = new SeatDto(seat.getId(), seat.getNumber(), seat.getRow(), seat.getPosition(), true);
             for (Ticket ticket : tickets)
                 if (ticket.getSeat().getId().equals(seatDto.getId())) {
                     seatDto.setAvailable(false);
