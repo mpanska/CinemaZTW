@@ -26,19 +26,25 @@ public class DataLoader implements ApplicationRunner {
     @Override
     public void run(ApplicationArguments args) throws Exception {
 //        for (int i = 0; i < 15; ++i)
-//            for (int j = 1; j <= 10; ++j) {
+//            for (int j = 1, k = 1; j <= 10; ++j, ++k) {
+//                if (k == 4 || k == 9)
+//                    ++k;
 //                Seat seat = new Seat();
 //                seat.setRow(alphabet[i]);
 //                seat.setNumber(j);
+//                seat.setPosition(k);
 //                seat.setHall(hallRepo.findById(1L).orElseThrow(RuntimeException::new));
 //                seatRepo.save(seat);
 //            }
 //
 //        for (int i = 0; i < 9; ++i)
-//            for (int j = 1; j <= 10; ++j) {
+//            for (int j = 1, k = 1; j <= 10; ++j, ++k) {
+//                if (k == 4 || k == 9)
+//                    ++k;
 //                Seat seat = new Seat();
 //                seat.setRow(alphabet[i]);
 //                seat.setNumber(j);
+//                seat.setPosition(k);
 //                seat.setHall(hallRepo.findById(2L).orElseThrow(RuntimeException::new));
 //                seatRepo.save(seat);
 //            }

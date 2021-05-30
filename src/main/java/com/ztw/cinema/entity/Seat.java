@@ -13,6 +13,8 @@ public class Seat {
 
     private String row;
 
+    private Integer position;
+
     @ManyToOne
     @JoinColumn(name="hall_id")
     private Hall hall;
@@ -42,6 +44,14 @@ public class Seat {
 
     public void setRow(String row) {
         this.row = row;
+    }
+
+    public Integer getPosition() {
+        return position;
+    }
+
+    public void setPosition(Integer position) {
+        this.position = position;
     }
 
     public Hall getHall() {
