@@ -24,6 +24,10 @@ public class Movie {
     @JoinColumn(name="genre_id")
     private Genre genre;
 
+    private String imageFileName;
+
+    private String trailer;
+
     public Movie() {
     }
 
@@ -81,5 +85,21 @@ public class Movie {
 
     public void setGenre(Genre genre) {
         this.genre = genre;
+    }
+
+    public String getImageFileName() {
+        return imageFileName;
+    }
+
+    public void setImageFileName(String imageFileName) {
+        this.imageFileName = imageFileName;
+    }
+
+    public String getTrailer() {
+        return trailer;
+    }
+
+    public void setTrailer(String trailer) {
+        this.trailer = trailer;
     }
 }
